@@ -20,4 +20,16 @@ function myFunction() {
         }
     }
 
+    //show page after loader
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 1000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("animate-bottom").style.display = "block";
+}
+
         

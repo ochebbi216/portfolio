@@ -5,7 +5,7 @@
   list-style: none;
   text-decoration: none;
   scroll-behavior: smooth;
-  scroll-padding-top: 2rem;
+  scroll-padding-top: 1rem;
   font-family: "Poppins", sans-serif;
 }
 :root {
@@ -17,6 +17,49 @@
   --big-font: 3.2rem;
   --medium-font: 1.8rem;
   --p-font: 0.941rem;
+}
+/*add loader to page */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  justify-content: center;
+  z-index: 1;
+  width: 70px;
+  height: 70px;
+  margin: -176px 0 -100px -76px;
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid var(--hover);
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* Add animation to page content */
+#animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
 }
 section {
   padding: 50px 10%;
