@@ -82,26 +82,15 @@ body {
 .heading h2 {
   font-size: 30px;
 }
- 
+nav{
+  box-shadow: -3px -3px 7px #ffffff73,
+  2px 2px 5px rgba(94, 104, 121, 0.288);
+ }
 .heading span {
   font-size: var(--p-font);
   color: rgb(2, 166, 70);
 }
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  right: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--bg-color);
-  padding: 13px 10%;
-  transition: 0.2s;
-  box-shadow: -3px -3px 7px #ffffff73,
-				2px 2px 5px rgba(94, 104, 121, 0.288);
-}
+
 header.shadow {
   box-shadow: 0 0 4px rgb(14 55 54 / 15%);
 }
@@ -611,7 +600,7 @@ form textarea {
   position: relative;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1%;
+  padding: 0.5%;
   background-color: var(--bg-color);
   color: var(--text-color);
 }
