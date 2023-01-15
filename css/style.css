@@ -222,6 +222,16 @@ header.shadow {
 .about-text h3 {
   text-decoration: underline;
 }
+.heading p {
+padding-left: 10%;
+padding-right: 10%;
+line-height: 30px;
+text-align: justify;
+}
+.heading h4 {
+  text-decoration: underline;
+
+}
 .information {
   margin: 1rem 0 1.4rem;
 }
