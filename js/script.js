@@ -1,12 +1,10 @@
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
+// responsive navbar 
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
     // Dark Mode
     let darkmode = document.querySelector('#darkmode');
      
