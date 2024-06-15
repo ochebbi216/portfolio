@@ -76,20 +76,20 @@
                     <h3>Bac Technique </h3>
                     <h5><i> Lycée Gremda </i></h5>
                     <h6 class="gtext">2018 - 2019</h6>
-                    <p>obtaining bac technique diploma with honors</p>
+                    <p>Achieving bac technique diploma with honors</p>
                     <br>
 
                     <h3>Data Science Licence </h3>
                     <h5><i>Higher Institute of Informatics and Multimedia
                             of Sfax</i></h5>
                     <h6 class="gtext">2019 - 2022</h6>
-                    <p>obtaining license in data analysis and big data
-                        with honors</p>
+                    <p>Achieving an Honors License in Data Analysis and Big Data
+                    </p>
                     <br>
                     <h3>Computer Science engineering </h3>
                     <h5><i>International Institute of Technologie of Sfax</i></h5>
                     <h6 class="gtext">2022 - Present</h6>
-                    <p>Stduying computer science engeering
+                    <p>Studying computer science engeering
                     </p>
 
                 </div>
@@ -99,12 +99,12 @@
                     <h3>PFA Internship</h3>
                     <h5><i>Primatec</i></h5>
                     <h6 class="gtext">2021 </h6>
-                    <p>Dashboading and data visualisation with python as language and Mongo DB as data base </p>
+                    <p>Dashboading and data visualisation with python as language and Mongo DB as database </p>
                     <br>
                     <h3>PFE Internship</h3>
                     <h5><i> It Services </i></h5>
                     <h6 class="gtext">2022</h6>
-                    <p>Multi-Season IOT platform and connection between eco-system using MEAN Stack Development</p>
+                    <p>Implementation of MEAN Stack Development in agriculture IoT platforms empowers multi-season users with administrative controls and facilitates a seamless connection between ecosystems.</p>
                 </div>
             </div>
         </section>
@@ -158,7 +158,7 @@
                         <!-- Box 2 -->
                         <div class="bars-box">
                             <h3>Java</h3>
-                            <span>83%</span>
+                            <span>88%</span>
                             <div class="light-bar"></div>
                             <div class="percent-bar java-bar"></div>
                         </div>
@@ -167,7 +167,7 @@
                             <h3>C</h3>
                             <span>82%</span>
                             <div class="light-bar"></div>
-                            <div class="percent-bar C-bar"></div>
+                            <div class="percent-bar c-bar"></div>
                         </div>
                         <!-- Box 4 -->
                         <div class="bars-box">
@@ -252,13 +252,12 @@
                 <span>Connect With Me</span>
             </div>
             <div class="contact-form">
-                <form id="form1" action="">
+                <form id="sheetdb-form" action="https://sheetdb.io/api/v1/evxx8obp6e994" method="post">
                     <input type="text" name="name" id="name" placeholder="Your Name">
                     <input type="email" name="email" id="email" placeholder="Your Email" required>
-                    <textarea name="user_message" id="text" cols="30" rows="10" maxlength="500"
-                        placeholder="Write Message Here..." required></textarea>
-                    <input type="submit" value="submit" class="contact-button">
-                </form>
+                    <textarea name="message" id="message" cols="30" rows="10" maxlength="500" placeholder="Write Message Here..." required></textarea>
+                    <input type="submit" value="Submit" class="contact-button">
+                  </form>   
             </div>
         </section>
         <!-- about iit -->
@@ -299,9 +298,28 @@
     </main>
     <!-- Link To JS -->
     <script src="js/script.js"></script>
-    <!-- <script src="./js/LocalStorage.js"></script>
-    <script src="./js/form.js"></script> -->
+<script>
+    // Post form data to SheetDB on form submission
+    var form = document.getElementById('sheetdb-form');
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert("Your message was sent successfully");
+            form.reset();
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("An error occurred. Please try again later.");
+        });
+    });
+</script>
 
+      
 </body>
 
 </html>
