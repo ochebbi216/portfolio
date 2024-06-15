@@ -30,4 +30,21 @@ function showPage() {
   document.getElementById("animate-bottom").style.display = "block";
 }
 
-        
+    // Post form data to SheetDB on form submission
+    var form = document.getElementById('sheetdb-form');
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert("Your message was sent successfully");
+            form.reset();
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("An error occurred. Please try again later.");
+        });
+    });
