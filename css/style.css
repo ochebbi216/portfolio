@@ -250,7 +250,7 @@ text-align: justify;
 .skills-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  align-items: center;
+  /* align-items: center; */
   gap: 2rem;
   margin-top: 4rem;
 }
@@ -299,7 +299,7 @@ span {
   width: 70%;
 }
 .ng-bar {
-  width: 80%;
+  width: 90%;
 }
 .py-bar {
   width: 78%;
@@ -308,21 +308,58 @@ span {
   width: 88%;
 }
 .c-bar {
-  width: 82%;
+  width: 77%;
 }
 .nodejs-bar {
   width: 75%;
 }
+.expressjs-bar {
+  width: 85%;
+}
+.php-bar {
+  width: 80%;
+}
+.csharp-bar {
+  width: 70%;
+}
+
+.flask-bar {
+  width: 90%;
+}.net-bar {
+  width: 75%;
+}.laravel-bar {
+  width: 80%;
+}.jee-bar {
+  width: 78%;
+}.sym-bar {
+  width: 50%;
+}
+.scrp-bar {
+  width: 65%;
+}
+.bs4-bar {
+  width: 85%;
+}
+.sel-bar {
+  width: 80%;
+}
+.odoo-bar {
+  width: 65%;
+}
+.jira-bar {
+  width: 40%;
+}
+
 .services-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(10px, auto));
   justify-content: center;
   gap: 1rem;
   margin-top: 2rem;
 }
 .services-box {
   padding: 20px;
-  width: 260px;
+  width: 290px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -341,6 +378,9 @@ span {
   margin: 0.7rem 0 0.4rem;
 }
 .services-box:hover h3{
+  color: #fff;
+}
+.services-box:hover p{
   color: #fff;
 }
 .services-box .bx {
