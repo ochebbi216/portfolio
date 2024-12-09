@@ -26,7 +26,7 @@ function myFunction() {
 }
 
 function showPage() {
-  document.getElementById("loader").style.display = "none";
+  document.getElementById("loader-container").style.display = "none";
   document.getElementById("animate-bottom").style.display = "block";
 }
 

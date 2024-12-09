@@ -18,55 +18,55 @@
   --medium-font: 1.8rem;
   --p-font: 0.941rem;
 }
-/*add loader to page */
-#loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
+/* Center the loader */
+#loader-container {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  z-index: 1;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff; /* Add a background color */
+  z-index: 9999; /* Ensure it covers everything */
+}
+
+/* Loader styles */
+#loader {
   width: 70px;
   height: 70px;
-  margin: -176px 0 -100px -76px;
   border: 10px solid #f3f3f3;
   border-radius: 50%;
   border-top: 10px solid var(--hover);
-  -webkit-animation: spin 1s linear infinite;
   animation: spin 1s linear infinite;
 }
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
 
+/* Animation for spinning loader */
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-/* Add animation to page content */
-#animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
-}
 
-@-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 } 
-  to { bottom:0px; opacity:1 }
+/* Animation for content */
+#animate-bottom {
+  display: none;
+  position: relative;
+  animation-name: animatebottom;
+  animation-duration: 1s;
 }
 
 @keyframes animatebottom { 
-  from{ bottom:-100px; opacity:0 } 
-  to{ bottom:0; opacity:1 }
+  from { bottom: -100px; opacity: 0; } 
+  to { bottom: 0; opacity: 1; }
 }
+
 section {
   padding: 50px 10%;
 }
 body.active {
   --text-color: #fff;
-  --bg-color: #0f0c27;
+  --bg-color: #000000;
 }
 body {
   background: var(--bg-color);
@@ -139,7 +139,9 @@ header.shadow {
 }
 .home-img img {
   width: 100%;
-  border-radius: 1%;
+  height: auto; 
+  border-radius: 50%; 
+  object-fit: cover; 
 }
 .home-text span {
   font-size: var(--medium-font);
